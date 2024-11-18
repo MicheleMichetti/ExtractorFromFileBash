@@ -10,7 +10,6 @@ fi
 
 input_file=$1
 output_file=$2
-variable_to_search=$3
 
 #Input file exists
 if [ ! -f "$input_file" ]; then
@@ -18,4 +17,4 @@ if [ ! -f "$input_file" ]; then
     exit 1
 fi
 
-sed -n '/variable_to_search/p' $input_file > $output_file
+sed -n '/ERROR/p' $input_file > $output_file
